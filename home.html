@@ -1,16 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MR Properties - Plots for Sale</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -18,31 +12,40 @@
     }
 
     body {
-      background-color: lemonchiffon; /* or your custom background */
+      background-color: lemonchiffon;
       font-family: Arial, sans-serif;
+    }
+
+    header.hero {
+      position: relative;
       padding: 20px;
     }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
     .logo {
-      max-width: 80px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 70px;
       height: auto;
     }
 
-    .title {
-      font-size: 6vw;
-      font-weight: bold;
-      color: #333;
-      text-align: left;
+    .hero-content {
+      text-align: center;
+      margin-top: 100px;
     }
 
-    .buttons {
+    .hero-content h1 {
+      font-size: 8vw;
+      color: #333;
+    }
+
+    .hero-content p {
+      font-size: 4vw;
+      color: #555;
+      margin: 10px 0 30px;
+    }
+
+    .button-group {
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -50,17 +53,15 @@
     }
 
     .btn {
-      padding: 14px 28px;
+      padding: 12px 24px;
       font-size: 5vw;
       max-width: 80%;
-      text-align: center;
       background-color: #007bff;
       color: white;
       border: none;
       border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
 
@@ -68,69 +69,117 @@
       background-color: #0056b3;
     }
 
+    .about, .contact {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about h2, .contact h2 {
+      font-size: 5vw;
+      margin-bottom: 10px;
+    }
+
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .carousel-track img {
+      width: 300px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 4vw;
+    }
+
     @media (min-width: 600px) {
-      .title {
-        font-size: 2.5em;
+      .hero-content h1 {
+        font-size: 3em;
+      }
+
+      .hero-content p {
+        font-size: 1.2em;
       }
 
       .btn {
         font-size: 1.2em;
-        padding: 12px 40px;
         max-width: 300px;
       }
 
-      .buttons {
-        flex-direction: row;
-        justify-content: center;
+      .about h2, .contact h2 {
+        font-size: 2em;
+      }
+
+      footer {
+        font-size: 1em;
       }
     }
   </style>
-
+</head>
 <body>
+
   <header class="hero">
-    <div class="overlay"></div>
-    
-    <!-- Logo at Top Right -->
     <img src="logo.png" alt="MR Properties Logo" class="logo">
 
     <div class="hero-content">
       <h1>MR Properties</h1>
       <p>Plots for Sale by S. Murali Reddy</p>
       <div class="button-group">
-        <a href="page-x.html" class="btn">Atmakur layout</a>
-        <a href="page-y.html" class="btn secondary">Dhanalakshmipuram layout</a>
+        <a href="page-x.html" class="btn">Atmakur Layout</a>
+        <a href="page-y.html" class="btn">Dhanalakshmipuram Layout</a>
       </div>
     </div>
   </header>
 
   <section class="about">
-    <h2>Here is S.Murali Reddy, Advocate present working as Realestate Developer</h2>
+    <h2>Here is S. Murali Reddy, Advocate and Real Estate Developer</h2>
   </section>
 
   <section class="contact">
     <h2>Contact</h2>
     <p>📞 Phone: +91 8977666665</p>
-    <p>📍 Location: Nellore,Andhra Pradesh, India</p>
+    <p>📍 Location: Nellore, Andhra Pradesh, India</p>
     <p>✉️ Email: muralireddy@gmail.com</p>
   </section>
+
   <div class="carousel">
-  <div class="carousel-track">
-    <img src="carousel1.jpg" alt="">
-    <img src="carousel2.jpg" alt="">
-    <img src="carousel3.jpg" alt="">
-    <img src="carousel4.jpg" alt="">
-    <img src="carousel5.jpg" alt="">
-    <!-- Duplicate for seamless loop -->
-    <img src="carousel1.jpg" alt="">
-    <img src="carousel2.jpg" alt="">
-    <img src="carousel3.jpg" alt="">
-    <img src="carousel4.jpg" alt="">
-    <img src="carousel5.jpg" alt="">
+    <div class="carousel-track">
+      <img src="carousel1.jpg" alt="Plot 1">
+      <img src="carousel2.jpg" alt="Plot 2">
+      <img src="carousel3.jpg" alt="Plot 3">
+      <img src="carousel4.jpg" alt="Plot 4">
+      <img src="carousel5.jpg" alt="Plot 5">
+      <!-- Repeats for seamless scroll -->
+      <img src="carousel1.jpg" alt="Plot 1">
+      <img src="carousel2.jpg" alt="Plot 2">
+      <img src="carousel3.jpg" alt="Plot 3">
+      <img src="carousel4.jpg" alt="Plot 4">
+      <img src="carousel5.jpg" alt="Plot 5">
+    </div>
   </div>
-</div>
 
   <footer>
     <p>© 2025 MR Properties. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
