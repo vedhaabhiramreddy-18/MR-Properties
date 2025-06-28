@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome to MR Properties</title>
   <style>
     * {
@@ -9,25 +10,32 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      background-image: url('logo.png'); /* Replace with your actual image file */
+      background-image: url('your-background.jpg'); /* Replace with your image */
       background-size: cover;
       background-position: center;
       height: 100vh;
+      font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
     }
+
     h1 {
+      font-size: 6vw; /* responsive size */
       color: white;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       text-shadow: 2px 2px 5px black;
     }
+
     .enter-btn {
-      padding: 12px 25px;
-      font-size: 18px;
+      padding: 12px 24px;
+      font-size: 5vw;
+      max-width: 80%;
       border: none;
       border-radius: 8px;
       background-color: #007bff;
@@ -36,8 +44,19 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       transition: background 0.3s ease;
     }
+
     .enter-btn:hover {
       background-color: #0056b3;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .enter-btn {
+        font-size: 1em;
+        padding: 12px 30px;
+      }
     }
   </style>
 </head>
@@ -46,4 +65,5 @@
   <button class="enter-btn" onclick="window.location.href='home.html'">Enter Website</button>
 </body>
 </html>
+
 
